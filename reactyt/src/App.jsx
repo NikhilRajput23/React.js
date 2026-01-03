@@ -1,12 +1,11 @@
-import React ,{useState}from "react";
-
-function App(){
-  const [a,setA]=useState(0);
-  return(
-  <div>
-     <h1 className="text-5xl bg-pink-700">value a is {a}</h1>
-    <button onClick={()=>setA(a+10)}>increment</button>
-     <button onClick={()=>setA(a-10)}>decrement</button>
-    </div> )
+import React from 'react';
+const App=()=>{
+  const submitH=()=>{
+    console.log("Hello World");
+  }
+  return(<div><form className='flex flex-col' onSubmit={submitH}>
+    <input className="px-3 py-4 text-xl m-10"type="text" placeholder='Enter a Input'/>
+    <button type="submit" className='px-3 py-4 m-10 border-white rounded text-xl font-semibold'>Submit</button>
+    </form></div>)
 }
-export default App
+export default App;
