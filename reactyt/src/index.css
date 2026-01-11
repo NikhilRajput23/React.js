@@ -1,11 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-    background-color: #000;
-    color:#fff;
-
+body {
+  background-color: #111;
+  color: #fff;
 }
-button{
-    background:white;
+
+h1 {
+  position: absolute;
+  font-size: 70px;
+  font-weight: 600;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  color: #fff;
 }
