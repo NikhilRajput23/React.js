@@ -1,21 +1,18 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Header from "./components/Header";
+import React, { useContext } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import { DataContext } from './Context/UserContext'
 
 const App = () => {
+  const data=useContext(DataContext);
   return (
-    <div>
+    <div><h1>name{data.usename}{data.name}
     <Header/>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+<Footer/>
+</h1>
     </div>
-  );
-};
 
-export default App;
+  )
+}
+
+export default App
