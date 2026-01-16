@@ -12,3 +12,10 @@ h1 {
   
   color: #fff;
 }
+button{
+  background: cadetblue;
+  font-size: 24px;
+  padding: 16px 19py;
+  margin: 20px ;
+  border-radius: 8px;
+}

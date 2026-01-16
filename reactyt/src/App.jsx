@@ -1,17 +1,18 @@
-import React, { useContext } from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import { DataContext } from './Context/UserContext'
+import React, { useState } from 'react'
 
 const App = () => {
-  const data=useContext(DataContext);
+const[a,setA]=useState(10);
+  const change =()=>{
+    setA(10+a)
+  }
+  const changeA=()=>{
+    setA(a-10)
+  }
   return (
-    <div><h1>name{data.usename}{data.name}
-    <Header/>
-<Footer/>
-</h1>
+    <div><h1>Username {a}</h1>
+    <button onClick={change}>Increment</button>
+    <button onClick={changeA}>Decrement</button>
     </div>
-
   )
 }
 
